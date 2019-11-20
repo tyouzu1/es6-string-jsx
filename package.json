@@ -1,9 +1,10 @@
+
 {
-  "name": "es6-string-html",
-  "displayName": "es6-string-html",
-  "description": "Syntax highlighting in es6 multiline strings",
-  "version": "2.0.0",
-  "publisher": "Tobermory",
+  "name": "es6-string-jsx",
+  "displayName": "es6-string-jsx",
+  "description": "Syntax highlighting for jsx in es6 multiline strings",
+  "version": "1.0.0",
+  "publisher": "Razio",
   "icon": "docs/logo.png",
   "engines": {
     "vscode": "^1.19.0"
@@ -13,82 +14,39 @@
     "theme": "light"
   },
   "repository": {
-    "url": "https://github.com/mydesireiscoma/es6-string-html"
+    "url": "https://github.com/tyouzu1/es6-string-jsx"
   },
   "bugs": {
-    "url": "https://github.com/mydesireiscoma/es6-string-html/issues"
+    "url": "https://github.com/tyouzu1/es6-string-jsx/issues"
   },
-  "main": "./scripts/main",
   "categories": [
     "Programming Languages"
   ],
   "keywords": [
     "javascript",
+    "javascriptreact",
+    "jsx",
     "es6",
-    "es6-string-html",
-    "html",
-    "sql"
-  ],
-  "activationEvents": [
-    "onCommand:es6stringhtml.insertComment",
-    "onCommand:es6stringhtml.insertTemplate"
+    "lit-javascript",
+    "lit-jsx",
+    "lit-javascriptreact",
+    "lit-html"
   ],
   "contributes": {
-    "commands": [
-      {
-        "command": "es6stringhtml.insertComment",
-        "title": "Insert es6-string-html comment",
-        "category": "HTML"
-      },
-      {
-        "command": "es6stringhtml.insertTemplate",
-        "title": "Insert es6-string-html template",
-        "category": "HTML"
-      }
-    ],
     "grammars": [
       {
         "injectTo": [
-          "inline.es6-html"
-        ],
-        "scopeName": "inline.es6-js-injection",
-        "path": "./syntaxes/es6-js-injection.json",
-        "embeddedLanguages": {
-          "meta.template.expression.ts": "typescript",
-          "meta.template.expression.js": "javascript",
-          "meta.embedded.block.html": "html"
-        }
-      },
-      {
-        "injectTo": [
-          "source.html",
           "source.js",
-          "source.js.jsx",
-          "source.jsx",
           "source.ts",
-          "source.tsx",
-          "text.html"
-        ],
-        "scopeName": "inline.es6-html",
-        "path": "./syntaxes/es6-inline-html.json",
-        "embeddedLanguages": {
-          "meta.embedded.block.html": "html"
-        }
-      },
-      {
-        "injectTo": [
-          "source.html",
-          "source.js",
-          "source.js.jsx",
           "source.jsx",
-          "source.ts",
-          "source.tsx",
-          "source.sql"
+          "source.tsx"
         ],
-        "scopeName": "inline.es6-sql",
-        "path": "./syntaxes/es6-inline-sql.json",
+        "scopeName": "inline.es6-jsx",
+        "path": "./syntaxes/es6-inline-jsx.json",
         "embeddedLanguages": {
-          "meta.embedded.sql": "sql"
+          "meta.embedded.block.html": "html",
+          "meta.embedded.block.javascript": "javascript",
+          "meta.embedded.block.javascriptreact": "javascriptreact"
         }
       }
     ]
